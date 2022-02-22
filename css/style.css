@@ -1,0 +1,13 @@
+:root {
+  --primary-color: rgba(99, 99, 238, 0.897);
+  --secondary-color: tomato;
+}
+
+.badges {
+  background-color: var(--primary-color);
+
+  /*FIXME:padding-top is not applied why  */
+  padding-top: 100px;
+  color: var(--secondary-color);
+  white-space: nowrap;
+}
