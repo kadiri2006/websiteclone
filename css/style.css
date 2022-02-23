@@ -1,13 +1,38 @@
 :root {
-  --primary-color: rgba(99, 99, 238, 0.897);
-  --secondary-color: tomato;
+  --color-primary: rgba(99, 99, 238, 0.897);
+  --color-secondary: tomato;
+  --text-color: white;
+  font-size: 62.5%;
 }
 
-.badges {
-  background-color: var(--primary-color);
+/* badges */
 
-  /*FIXME:padding-top is not applied why  */
-  padding-top: 100px;
-  color: var(--secondary-color);
+.badges {
+  border-radius: 20px;
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
   white-space: nowrap;
+}
+
+.badges--secondary {
+  background-color: var(--color-secondary);
+  color: var(--text-color);
+}
+.badges--primary {
+  background-color: var(--color-primary);
+  color: var(--text-color);
+}
+
+.badges--mini {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .badges {
+    font-size: 1.5rem;
+  }
+
+  .badges--mini {
+    font-size: 1.2rem;
+  }
 }
