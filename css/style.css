@@ -1,8 +1,14 @@
 :root {
   --color-primary: rgba(99, 99, 238, 0.897);
   --color-secondary: tomato;
+  --color-body: #918ca4;
   --text-color: white;
   font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  line-height: 1.5;
 }
 
 /* badges */
@@ -34,5 +40,33 @@
 
   .badges--mini {
     font-size: 1.2rem;
+  }
+}
+
+/* Lists */
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list--tick {
+  list-style-image: url("../images/tick.svg");
+  padding-left: 3rem;
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0rem;
   }
 }
