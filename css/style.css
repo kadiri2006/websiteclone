@@ -3,6 +3,7 @@
   --color-secondary: tomato;
   --color-body: #918ca4;
   --color-text: white;
+  --border-radius: 30px;
   font-size: 62.5%;
 }
 
@@ -154,12 +155,12 @@ a {
   }
 }
 
-/* Button */
+/* Input */
 
 .input {
   outline: none;
   border: 1px solid var(--color-primary);
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   padding: 1.5rem 3.5rem;
   color: var(--color-primary);
   font-size: 2rem;
@@ -167,6 +168,25 @@ a {
 
 ::placeholder {
   color: lightsteelblue;
+}
+
+.input-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius);
+}
+
+.input-container .input {
+  flex-grow: 1;
+  border: 0;
+  padding: 1rem 0.5rem;
+}
+
+.input-container .btn,
+.input-container .icon-container {
+  margin: 4px;
 }
 
 @media screen and (min-width: 1024px) {
