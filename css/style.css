@@ -29,6 +29,7 @@ a {
   font-size: 2rem;
   padding: 0.5rem 2rem;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .badges--secondary {
@@ -193,4 +194,55 @@ a {
   .input {
     font-size: 1.5rem;
   }
+}
+
+/* Card */
+
+.card {
+  margin: 2rem;
+      
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 7px 7px 10px 0px;
+  overflow: hidden; /*if not set overflow is hidden child elements covers parent since border-radius not appears on top of card */
+}
+.card__header,
+.card__body {
+  padding: 1rem 2rem;
+}
+
+.card-primary .card__header {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+.card-secondary .card__header {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.card__name {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.card__price {
+  font-size: 5rem;
+}
+
+.card__billing-cycle {
+  opacity: 0.8;
+  font-weight: 200;
+  font-size: 1.6rem;
+}
+
+.card-primary .badges--background {
+  background-color: var(--color-primary);
+}
+.card-secondary .badges--background {
+  background-color: rgb(247, 49, 14);
+}
+.card__description {
+  display: block;
+  letter-spacing: 1px;
 }
