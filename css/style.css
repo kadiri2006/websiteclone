@@ -246,3 +246,23 @@ a {
   display: block;
   letter-spacing: 1px;
 }
+
+/* card with badge */
+
+.card-badge .card__header::after{
+  content:url("../images/popular.svg");
+  width: 40px;
+  display: inline-block;
+  position:absolute;
+  top: -6px;
+  right:5%
+  
+
+}
+
+.card-badge .card__header {
+  position: relative;
+}
+
+
+
