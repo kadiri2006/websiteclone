@@ -86,7 +86,8 @@ a {
 /* Icons */
 
 .icon {
-  width: 30px;
+  width: 40px;
+  height: 40px; /* if we does not provide height explicitly then its automatically takes height values to satisify aspect ratio so its leads to took icon more space in height */
 }
 
 .icon--primary {
@@ -200,7 +201,7 @@ a {
 
 .card {
   margin: 2rem;
-      
+
   background-color: whitesmoke;
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 7px 7px 10px 0px;
@@ -249,20 +250,31 @@ a {
 
 /* card with badge */
 
-.card-badge .card__header::after{
-  content:url("../images/popular.svg");
+.card-badge .card__header::after {
+  content: url("../images/popular.svg");
   width: 40px;
   display: inline-block;
-  position:absolute;
+  position: absolute;
   top: -6px;
-  right:5%
-  
-
+  right: 5%;
 }
 
 .card-badge .card__header {
   position: relative;
 }
 
+/* media */
 
+.media {
+  display: flex;
+}
+.media__image {
+  margin-top: 1rem;
+}
 
+.media__body {
+  margin: 0 2rem;
+}
+.media__title {
+  margin: 0;
+}
