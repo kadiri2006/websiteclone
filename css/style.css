@@ -3,8 +3,13 @@
   --color-secondary: tomato;
   --color-body: #918ca4;
   --color-text: white;
+  --color-accent:red;
   --border-radius: 30px;
   font-size: 62.5%;
+}
+
+body {
+  /* padding: 5rem; */
 }
 
 * {
@@ -89,9 +94,17 @@ a {
   width: 40px;
   height: 40px; /* if we does not provide height explicitly then its automatically takes height values to satisify aspect ratio so its leads to took icon more space in height */
 }
+.icon--small {
+  width: 25px;
+  height: 25px;
+}
 
 .icon--primary {
   fill: var(--color-primary); /* its provide color to svg  */
+}
+
+.icon--white {
+  fill: white;
 }
 
 .icon-container {
@@ -102,6 +115,10 @@ a {
   border-radius: 100%;
   align-items: center;
   justify-content: center;
+}
+
+.icon-container--accent {
+  background-color:var(--color-accent) ;
 }
 
 /* Button */
@@ -199,7 +216,8 @@ a {
 
 /* Card */
 
-.card {
+.card,
+.card--inline {
   margin: 2rem;
 
   background-color: whitesmoke;
@@ -207,6 +225,10 @@ a {
   box-shadow: rgba(100, 100, 111, 0.2) 7px 7px 10px 0px;
   overflow: hidden; /*if not set overflow is hidden child elements covers parent since border-radius not appears on top of card */
 }
+.card--inline {
+  display: inline-block;
+}
+
 .card__header,
 .card__body {
   padding: 1rem 2rem;
@@ -312,7 +334,7 @@ a {
   opacity: 0.4;
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .quote {
     font-size: 2rem;
   }
@@ -322,4 +344,57 @@ a {
   .quote__oraganization {
     font-size: 1.6rem;
   }
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* testimonial */
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__icon > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial__icon {
+  position: relative;
+  margin-right: 4.5rem;
+}
+
+.testimonial__icon > .icon-container {
+  position: absolute;
+  right: -25px;
+  top: 3rem;
+}
+
+
+
+
+
+.testimonial .quote__author {
+  font-size: 3rem;
+  white-space: nowrap;
+}
+.testimonial .quote__oraganization {
+  white-space: nowrap;
 }
