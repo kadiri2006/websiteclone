@@ -2,6 +2,7 @@
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
   --color-body: #918ca4;
+  --color-heading: #1b0760;
   --color-text: white;
   --color-accent: red;
   --border-radius: 30px;
@@ -481,4 +482,39 @@ a {
 .collapsible__chevron {
   transform: initial;
   transition: all 1s;
+}
+
+/* Block */
+
+.block {
+  --padding-y: 6rem;
+  padding: var(--padding-y) 0;
+}
+
+.block__header {
+  text-align: center;
+  color: rgb(123, 133, 139);
+}
+
+.block__heading {
+  color: var(--color-heading);
+  margin-top: 0;
+}
+
+.block--bg-black {
+  background-color: black;
+}
+
+.block--bg-black .block__heading {
+  color: var(--color-text);
+}
+
+.block--skewed-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 77%, 0% 100%);
+  padding-bottom: calc(var(--padding-y) + 4rem);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
