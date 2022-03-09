@@ -23,6 +23,7 @@ h2,
 h3,
 h4 {
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 p {
@@ -161,6 +162,11 @@ a {
 
 .btn--secondary:hover {
   background: orangered;
+}
+
+.btn--accent {
+  background-color: var(--color-accent);
+  color: var(--color-text);
 }
 
 .btn--block {
@@ -487,7 +493,7 @@ a {
 
 .block {
   --padding-y: 6rem;
-  padding: var(--padding-y) 0;
+  padding: var(--padding-y) 2rem;
 }
 
 .block__header {
@@ -510,6 +516,11 @@ a {
 
 .block--skewed-right {
   clip-path: polygon(0% 0%, 100% 0%, 100% 77%, 0% 100%);
+  padding-bottom: calc(var(--padding-y) + 4rem);
+}
+
+.block--skewed-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
   padding-bottom: calc(var(--padding-y) + 4rem);
 }
 
@@ -576,5 +587,25 @@ a {
   .nav__item {
     /* white-space: nowrap; */
     margin-left: 3rem;
+  }
+}
+
+/* Hero */
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.hero__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero .block__header {
+    align-self: center;
+    text-align: left;
+  }
+
+  .hero {
+    padding-top: 0;
   }
 }
