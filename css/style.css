@@ -48,7 +48,7 @@ a {
 
 .badges--secondary {
   background-color: var(--color-secondary);
-  color: var(--text-color);
+  color: var(--color-text);
 }
 .badges--primary {
   background-color: var(--color-primary);
@@ -211,7 +211,7 @@ a {
 }
 
 .input-container {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--color-primary);
@@ -526,9 +526,9 @@ a {
 
 .container {
   max-width: 1140px;
-  width: 80%;
+
   margin: 0 auto;
-  /* outline: solid 10px red; */
+  /* outline: solid 3px red; */
 }
 
 /* Navbar */
@@ -614,16 +614,22 @@ a {
 
 /* block-domain */
 
-.block-domain__prices {
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  margin: 3rem auto;
-  justify-items: center;
+.block-domain .input-container {
+  box-shadow: 0 0 30px 20px #e6ebee;
+
+  margin: 4rem auto;
+
+  max-width: 810px;
 }
 
-.block-domain .input-container {
-  width: 100%;
+.block-domain__prices {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 6rem);
+  margin: 3rem auto;
+  justify-items: center;
+  max-width: 80rem;
 }
+
 .block-domain .btn {
   border-radius: 50%;
   height: 5rem;
@@ -632,12 +638,8 @@ a {
   width: 5rem;
 }
 
-.block-domain input {
-  width: 80%;
-}
-
 .block-domain .icon {
-  fill: red;
+  fill: red; /*FIXME: why this property is not applied  */
 }
 
 @media screen and (max-width: 415px) {
@@ -647,5 +649,12 @@ a {
 
   .container {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-rows: initial;
   }
 }
