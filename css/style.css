@@ -12,6 +12,7 @@
 body {
   font-size: 2.4rem;
   line-height: 1.5;
+  padding: 5rem;
 }
 
 * {
@@ -239,12 +240,12 @@ a {
 
 .card,
 .card--inline {
-  margin: 2rem;
-
   background-color: whitesmoke;
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 7px 7px 10px 0px;
+  margin: 2rem;
   overflow: hidden; /*if not set overflow is hidden child elements covers parent since border-radius not appears on top of card */
+  transition: transform 0.3s ease-in-out;
 }
 .card--inline {
   display: inline-block;
@@ -255,11 +256,11 @@ a {
   padding: 1rem 2rem;
 }
 
-.card-primary .card__header {
+.card--primary .card__header {
   background-color: var(--color-primary);
   color: var(--color-text);
 }
-.card-secondary .card__header {
+.card--secondary .card__header {
   background-color: var(--color-secondary);
   color: var(--color-text);
 }
@@ -280,20 +281,32 @@ a {
   font-size: 1.6rem;
 }
 
-.card-primary .badges--background {
-  background-color: var(--color-primary);
+.card--primary .badges--background {
+  background-color: #126de4;
 }
-.card-secondary .badges--background {
-  background-color: rgb(247, 49, 14);
+.card--secondary .badges--background {
+  background-color: #02cdf1;
 }
 .card__description {
   display: block;
   letter-spacing: 1px;
 }
 
+.card:hover {
+  transform: scale(1.05);
+}
+
 /* card with badge */
 
-.card-badge .card__header::after {
+.card--badge {
+  transform: scale(1.1);
+}
+
+.card--badge:hover {
+  transform: scale(1.15);
+}
+
+.card--badge .card__header::after {
   content: url("../images/popular.svg");
   width: 40px;
   display: inline-block;
@@ -302,7 +315,7 @@ a {
   right: 5%;
 }
 
-.card-badge .card__header {
+.card--badge .card__header {
   position: relative;
 }
 
@@ -528,7 +541,7 @@ a {
   max-width: 1140px;
 
   margin: 0 auto;
-  /* outline: solid 3px red; */
+  outline: solid 3px red;
 }
 
 /* Navbar */
@@ -656,5 +669,19 @@ a {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     grid-template-rows: initial;
+  }
+}
+
+/* block-cards */
+
+.block-cards .grid {
+  gap: 27rem 0;
+}
+
+@media screen and (min-width: 720px) {
+  .block-cards .card {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
