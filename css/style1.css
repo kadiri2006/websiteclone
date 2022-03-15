@@ -1,32 +1,18 @@
 .grid {
     display: grid;
-}
-
-.one {
+    
+  }
+  
+  .one {
     background-color: aqua;
-    max-width: 300px;
-    /* margin: 0 auto; */
-    margin-left: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+    max-width:500px;
+  
 }
 
 
-/////
 
- <div class="grid">
-      <div class="one">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-          odit quis voluptatum facilis incidunt, maxime rem reiciendis harum,
-          nobis quia, officia repellat expedita fugit adipisci consequuntur
-          optio. Aspernatur, consequuntur saepe?
-        </p>
-      </div>
-      <div class="two">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae
-          magnam cum, molestias incidunt blanditiis omnis ab placeat
-          consectetur? Inventore provident vero debitis adipisci ut id hic harum
-          vitae pariatur!
-        </p>
-      </div>
-    </div>
+
+ 

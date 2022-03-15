@@ -37,6 +37,23 @@ a {
   text-decoration: none;
 }
 
+.link-arrow {
+  color: var(--color-accent);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.link-arrow::after {
+  content: "--->";
+  margin-left: 5px;
+  transition: margin 0.1s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 1rem;
+}
+
 /* badges */
 
 .badges {
@@ -686,5 +703,27 @@ a {
 @media screen and (max-width: 1020px) {
   .block-cards.block {
     padding: 0;
+  }
+}
+
+/* feature */
+
+.feature__image {
+  width: 100%;
+}
+
+.feature {
+  gap: 4rem 4rem;
+  align-items: center;
+  margin: 10rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 1;
   }
 }
