@@ -261,7 +261,7 @@ a {
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 7px 7px 10px 0px;
   margin: 2rem;
-  overflow: hidden; /*if not set overflow is hidden child elements covers parent since border-radius not appears on top of card */
+  overflow: hidden; /*if not set overflow is hidden child elements covers parent than border-radius not appears on top of card */
   transition: transform 0.3s ease-in-out;
 }
 .card--inline {
@@ -419,6 +419,7 @@ a {
 
 .testimonial {
   padding: 3rem;
+  /* overflow: initial; */
 }
 
 .testimonial__icon > img {
@@ -750,4 +751,18 @@ a {
     width: auto;
     justify-self: right;
   }
+}
+
+/* block-testimonial */
+
+.block-testimonial .testimonial {
+  padding: 0;
+  margin: 0;
+}
+.block-testimonial .block {
+  margin: 0;
+}
+
+.block-testimonial blockquote {
+  margin: 1rem;
 }
