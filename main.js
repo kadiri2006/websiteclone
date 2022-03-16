@@ -1,4 +1,10 @@
-let collapsible = document.getElementsByClassName("collapsible--expanded")[0];
-collapsible.addEventListener("click", () => {
-  collapsible.classList.toggle("collapsible--expanded");
-});
+let collapsible = document.querySelectorAll(".collapsible--expanded");
+collapsible.forEach((e) =>
+  e.addEventListener("click", function () {
+    this.classList.toggle("collapsible--expanded");
+  })
+);
+
+
+
+

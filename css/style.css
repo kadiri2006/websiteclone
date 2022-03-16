@@ -766,3 +766,56 @@ a {
 .block-testimonial blockquote {
   margin: 1rem;
 }
+
+/* footer-block */
+
+.footer section {
+  border-bottom: 1px solid rgb(85, 83, 83);
+  padding-bottom: 2rem;
+}
+
+.footer.grid {
+  gap: 2rem;
+}
+
+.footer__brand {
+  text-align: center;
+}
+
+.footer a {
+  color: rgb(221, 215, 215);
+}
+
+.footer a:hover {
+  color: rgb(255, 255, 255);
+  
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .footer .footer__brand {
+    order: -1;
+  }
+
+  .footer .collapsible__chevron {
+    display: none;
+  }
+
+  .footer section {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .footer .collapsible__heading {
+    font-size: 1.8rem;
+  }
+
+  .footer .collapsible__body {
+    opacity: 0.5;
+    max-height: initial;
+  }
+  
+}
