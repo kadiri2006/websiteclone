@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Noshify</title>
   </head>
   <body>
@@ -30,7 +31,14 @@
           <a href="#" class="btn btn--accent btn--stretched">Get started</a>
         </header>
 
-        <img src="images/banner.png" alt="" srcset="" class="hero__image" />
+        <img
+          src="images/banner.png"
+          alt=""
+          srcset=""
+          class="hero__image"
+          data-aos="slide-left"
+          data-aos-delay="300"
+        />
       </div>
     </section>
     <section class="container block block-domain">
@@ -87,7 +95,7 @@
           </div>
         </div>
 
-        <div class="card card--primary card--badge">
+        <div class="card card--primary card--badge" data-aos="zoom-in-up" data-aos-delay="300">
           <header class="card__header">
             <h3 class="card__name">Entry</h3>
             <span class="card__price">$14</span>
@@ -160,7 +168,13 @@
             type="image/jpg
           "
           />
-          <img src="images/easy@2x.jpg" alt="" class="feature__image" />
+          <img
+            src="images/easy@2x.jpg"
+            alt=""
+            class="feature__image"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          />
         </picture>
       </article>
       <article class="grid grid--1x2 feature">
@@ -189,17 +203,27 @@
             type="image/jpg
         "
           />
-          <img src="images/easy@2x.jpg" alt="" class="feature__image" />
+          <img
+            src="images/easy@2x.jpg"
+            alt=""
+            class="feature__image"
+            data-aos="fade-down"
+            data-aos-delay="300"
+          />
         </picture>
       </article>
-      
     </section>
     <section class="block block--bg-black block--skewed-left block-showcase">
       <header class="block__header">
         <h2>User-friendly Control Panel</h2>
       </header>
       <div class="container grid grid--1x2">
-        <img src="images/ipad.png" class="block-showcase__image" />
+        <img
+          src="images/ipad.png"
+          class="block-showcase__image"
+          data-aos="fade-left"
+          data-aos-delay="300"
+        />
         <ul class="list">
           <li>
             <div class="media">
@@ -260,7 +284,12 @@
           soluta!
         </p>
       </header>
-      <div class="card grid grid--1x2 testimonial">
+      <div
+        class="card grid grid--1x2 testimonial"
+        data-aos="flip-up"
+        data-aos-delay="300"
+        
+      >
         <div class="testimonial__icon">
           <img src="images/testimonial.jpg" alt="" srcset="" />
           <span class="icon-container icon-container--accent">
@@ -363,5 +392,9 @@
       </div>
     </footer>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
