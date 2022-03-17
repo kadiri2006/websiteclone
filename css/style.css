@@ -700,7 +700,7 @@ a {
 /* block-cards */
 
 .block-cards .grid {
-  gap: 27rem 0;
+  gap: 7rem 0;
 }
 
 .block-cards .card {
@@ -788,11 +788,10 @@ a {
 
 .footer a:hover {
   color: rgb(255, 255, 255);
-  
 }
 
 @media screen and (min-width: 768px) {
-  .grid {
+  .footer .grid {
     grid-template-columns: repeat(5, 1fr);
   }
 
@@ -817,5 +816,4 @@ a {
     opacity: 0.5;
     max-height: initial;
   }
-  
 }

@@ -9,6 +9,291 @@
     <title>k</title>
   </head>
   <body>
+    <nav class="navbar collapsible--expanded">
+      <a href="/" class="navbar__img"><img src="images/logo.svg" alt="" /></a>
+      <svg class="icon icon--primary navbar__menu">
+        <use xlink:href="images/spriteMosh.svg#menu"></use>
+      </svg>
+
+      <ul class="list navbar__list collapsible__body">
+        <li class="list__item nav__item"><a href="#">Hosting</a></li>
+        <li class="list__item nav__item"><a href="#">VPS</a></li>
+        <li class="list__item nav__item"><a href="#">Domain</a></li>
+        <li class="list__item nav__item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+    <section class="block block--bg-black block--skewed-right hero">
+      <div class="container grid grid--1x2">
+        <header class="block__header">
+          <h1 class="block__heading">Cloud Hosting for pros</h1>
+          <p>Deploy your website in less than 60 seconds</p>
+          <a href="#" class="btn btn--accent btn--stretched">Get started</a>
+        </header>
+
+        <img src="images/banner.png" alt="" srcset="" class="hero__image" />
+      </div>
+    </section>
+    <section class="container block block-domain">
+      <header class="block__header">
+        <h1>Starting at $9 per month</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+          exercitationem?
+        </p>
+        <div class="input-container">
+          <input
+            type="text"
+            class="input"
+            placeholder="Enter Domain Name here..."
+          />
+          <button class="btn btn--primary">
+            <svg class="icon icon--small">
+              <use xlink:href="images/spriteMosh.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <ul class="list grid block-domain__prices">
+        <li>
+          <span class="badges badges--secondary">.com $10</span>
+        </li>
+        <li>.space $10</li>
+        <li>.info $10</li>
+        <li>.net $10</li>
+        <li>.xyz $10</li>
+        <li>.sg $10</li>
+      </ul>
+    </section>
+    <section class="container block block-cards">
+      <div class="grid grid--1x3">
+        <!-- <div></div> FIXME:if we wrap first card with class name "card card--secondary within this div then  at screen size 500px - 1000px card block also resizes upto max-width :50 rem ,but this behaviour not appeared without wrapp and card maintains size around 280px why?" -->
+
+        <div class="card card--secondary">
+          <header class="card__header">
+            <h3 class="card__name">Entry</h3>
+            <span class="card__price">$14</span>
+            <span class="card__billing-cycle">/month</span>
+            <span class="badges badges--background badges--mini">10% off</span>
+            <span class="card__description">Easy start on the cloud</span>
+          </header>
+          <div class="card__body">
+            <ul class="list list--tick">
+              <li class="list__item">Unlimited Websites</li>
+              <li class="list__item">Unlimited Bandwidth</li>
+              <li class="list__item">100 GB SSD Sotrage</li>
+              <li class="list__item">3 GB RAM</li>
+            </ul>
+            <button class="btn btn--outline btn--block">buy now</button>
+          </div>
+        </div>
+
+        <div class="card card--primary card--badge">
+          <header class="card__header">
+            <h3 class="card__name">Entry</h3>
+            <span class="card__price">$14</span>
+            <span class="card__billing-cycle">/month</span>
+            <span class="badges badges--background badges--mini">10% off</span>
+            <span class="card__description">Easy start on the cloud</span>
+          </header>
+          <div class="card__body">
+            <ul class="list list--tick">
+              <li class="list__item">Unlimited Websites</li>
+              <li class="list__item">Unlimited Bandwidth</li>
+              <li class="list__item">100 GB SSD Sotrage</li>
+              <li class="list__item">3 GB RAM</li>
+            </ul>
+            <button class="btn btn--outline btn--block">buy now</button>
+          </div>
+        </div>
+        <div class="card card--secondary">
+          <header class="card__header">
+            <h3 class="card__name">Entry</h3>
+            <span class="card__price">$14</span>
+            <span class="card__billing-cycle">/month</span>
+            <span class="badges badges--background badges--mini">10% off</span>
+            <span class="card__description">Easy start on the cloud</span>
+          </header>
+          <div class="card__body">
+            <ul class="list list--tick">
+              <li class="list__item">Unlimited Websites</li>
+              <li class="list__item">Unlimited Bandwidth</li>
+              <li class="list__item">100 GB SSD Sotrage</li>
+              <li class="list__item">3 GB RAM</li>
+            </ul>
+            <button class="btn btn--outline btn--block">buy now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block container">
+      <header class="block__header">
+        <h2>Host on the Cloud to Keep Growing</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima,
+          facere.
+        </p>
+      </header>
+
+      <article class="grid grid--1x2 feature">
+        <div class="feature__content">
+          <span class="icon-container">
+            <svg class="icon icon--primary">
+              <use xlink:href="images/spriteMosh.svg#easy"></use>
+            </svg>
+          </span>
+          <h3>Super Easy to Use</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
+            pariatur ut nemo voluptate aliquam! Harum beatae saepe ullam
+            blanditiis fugit sapiente minima nobis quibusdam perspiciatis neque.
+            Expedita error eius hic?
+          </p>
+          <a href="#" class="link-arrow">learn more</a>
+        </div>
+        <picture>
+          <source
+            srcset="images/easy.webp 1x, images/easy@2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            srcset="images/easy.jpg 1x, images/easy@2x.jpg 2x"
+            type="image/jpg
+          "
+          />
+          <img src="images/easy@2x.jpg" alt="" class="feature__image" />
+        </picture>
+      </article>
+      <article class="grid grid--1x2 feature">
+        <div class="feature__content">
+          <span class="icon-container">
+            <svg class="icon icon--primary">
+              <use xlink:href="images/spriteMosh.svg#wordpress"></use>
+            </svg>
+          </span>
+          <h3>Super Easy to Use</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
+            pariatur ut nemo voluptate aliquam! Harum beatae saepe ullam
+            blanditiis fugit sapiente minima nobis quibusdam perspiciatis neque.
+            Expedita error eius hic?
+          </p>
+          <a href="#" class="link-arrow">learn more</a>
+        </div>
+        <picture>
+          <source
+            srcset="images/easy.webp 1x, images/easy@2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            srcset="images/easy.jpg 1x, images/easy@2x.jpg 2x"
+            type="image/jpg
+        "
+          />
+          <img src="images/easy@2x.jpg" alt="" class="feature__image" />
+        </picture>
+      </article>
+      
+    </section>
+    <section class="block block--bg-black block--skewed-left block-showcase">
+      <header class="block__header">
+        <h2>User-friendly Control Panel</h2>
+      </header>
+      <div class="container grid grid--1x2">
+        <img src="images/ipad.png" class="block-showcase__image" />
+        <ul class="list">
+          <li>
+            <div class="media">
+              <div class="media__image">
+                <svg class="icon icon--primary">
+                  <use xlink:href="images/spriteMosh.svg#snap"></use>
+                </svg>
+              </div>
+              <div class="media__body">
+                <h3 class="media__title">Easy Start&Managed Updates</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                  sed, corporis quas quis dolor nemo adipisci earum voluptatum
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="media">
+              <div class="media__image">
+                <svg class="icon icon--primary">
+                  <use xlink:href="images/spriteMosh.svg#growth"></use>
+                </svg>
+              </div>
+              <div class="media__body">
+                <h3 class="media__title">Staging,GIT&WP-CLI</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                  sed, corporis quas quis dolor nemo adipisci earum voluptatum
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="media">
+              <div class="media__image">
+                <svg class="icon icon--primary">
+                  <use xlink:href="images/spriteMosh.svg#wordpress"></use>
+                </svg>
+              </div>
+              <div class="media__body">
+                <h3 class="media__title">Dynamic Caching&More</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                  sed, corporis quas quis dolor nemo adipisci earum voluptatum
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="container block block-testimonial">
+      <header class="block__header">
+        <h2 class="block__heading">what our Customers are Saying</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur,
+          soluta!
+        </p>
+      </header>
+      <div class="card grid grid--1x2 testimonial">
+        <div class="testimonial__icon">
+          <img src="images/testimonial.jpg" alt="" srcset="" />
+          <span class="icon-container icon-container--accent">
+            <svg class="icon--white icon--small">
+              <use xlink:href="images/spriteMosh.svg#quotes"></use>
+            </svg>
+          </span>
+        </div>
+
+        <blockquote class="quote">
+          <p class="quote__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+            placeat minima itaque saepe reprehenderit ad reiciendis amet
+            voluptate esse ea hic fuga mollitia, quos fugiat corporis aliquam
+            adipisci ullam officiis!
+          </p>
+          <footer>
+            <div class="media">
+              <div class="media__image">
+                <svg class="icon icon--primary quote__line">
+                  <use xlink:href="images/spriteMosh.svg#line"></use>
+                </svg>
+              </div>
+              <div class="media__body">
+                <h3 class="media__title quote__author">John Rockey</h3>
+                <p class="quote__oraganization">BCC Company</p>
+              </div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
     <footer class="block block--bg-black footer">
       <div class="container grid">
         <section class="collapsible collapsible--expanded">

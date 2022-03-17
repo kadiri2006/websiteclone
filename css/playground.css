@@ -1,0 +1,819 @@
+:root {
+  --border-radius: 30px;
+  --color-accent: red;
+  --color-body: #918ca4;
+  --color-heading: #1b0760;
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-text: white;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  /* padding: 5rem; */
+}
+
+* {
+  box-sizing: border-box;
+}
+/* elements */
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.link-arrow::after {
+  content: "--->";
+  margin-left: 5px;
+  transition: margin 0.1s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 1rem;
+}
+
+/* badges */
+
+.badges {
+  border-radius: 20px;
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badges--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+.badges--primary {
+  background-color: var(--color-primary);
+  color: var(--text-color);
+}
+
+.badges--mini {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .badges {
+    font-size: 1.5rem;
+  }
+
+  .badges--mini {
+    font-size: 1.2rem;
+  }
+}
+
+/* Lists */
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list--tick {
+  list-style-image: url("../images/tick.svg");
+  padding-left: 3rem;
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0rem;
+  }
+}
+
+/* Icons */
+
+.icon {
+  width: 40px;
+  height: 40px; /* if we does not provide height explicitly then its automatically takes height values to satisify aspect ratio so its leads to took icon more space in height */
+}
+.icon--small {
+  width: 25px;
+  height: 25px;
+}
+
+.icon--primary {
+  fill: var(--color-primary); /* its provide color to svg  */
+}
+
+.icon--white {
+  fill: white;
+}
+
+.icon-container {
+  align-items: center;
+  background-color: #a490f5;
+  border-radius: 100%;
+  display: inline-flex;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+}
+
+.icon-container--accent {
+  background-color: var(--color-accent);
+}
+
+/* Button */
+
+.btn {
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-text);
+}
+
+.btn--primary:hover {
+  background: blue;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.btn--secondary:hover {
+  background: orangered;
+}
+
+.btn--accent {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--outline {
+  background: none;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  color: azure;
+  background: var(--color-primary);
+}
+
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* Input */
+
+.input {
+  outline: none;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  padding: 1.5rem 3.5rem;
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+::placeholder {
+  color: lightsteelblue;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius);
+}
+
+.input-container .input {
+  flex-grow: 1;
+  border: 0;
+  padding: 1rem 0.5rem;
+}
+
+.input-container .btn,
+.input-container .icon-container {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+
+/* Card */
+
+.card,
+.card--inline {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 7px 7px 10px 0px;
+  margin: 2rem;
+  overflow: hidden; /*if not set overflow is hidden child elements covers parent than border-radius not appears on top of card */
+  transition: transform 0.3s ease-in-out;
+}
+.card--inline {
+  display: inline-block;
+}
+
+.card__header,
+.card__body {
+  padding: 1rem 2rem;
+}
+
+.card--primary .card__header {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+.card--secondary .card__header {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.card__name {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.card__price {
+  font-size: 5rem;
+}
+
+.card__billing-cycle {
+  opacity: 0.8;
+  font-weight: 200;
+  font-size: 1.6rem;
+}
+
+.card--primary .badges--background {
+  background-color: #126de4;
+}
+.card--secondary .badges--background {
+  background-color: #02cdf1;
+}
+.card__description {
+  display: block;
+  letter-spacing: 1px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* card with badge */
+
+.card--badge {
+  transform: scale(1.1);
+}
+
+.card--badge:hover {
+  transform: scale(1.15);
+}
+
+.card--badge .card__header::after {
+  content: url("../images/popular.svg");
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+
+.card--badge .card__header {
+  position: relative;
+}
+
+/* media */
+
+.media {
+  display: flex;
+}
+.media__image {
+  margin-top: 1rem;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+.media__title {
+  margin-top: 0;
+}
+
+/* quotes */
+
+.quote {
+  color: #5c5577;
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+.quote__text {
+  font-style: italic;
+}
+
+.quote__text::before {
+  content: open-quote;
+}
+.quote__text::after {
+  content: close-quote;
+}
+
+.quote__line {
+  position: relative;
+  bottom: 10px;
+}
+
+.quote__author {
+  font-weight: 500;
+}
+
+.quote__oraganization {
+  margin-top: 0;
+  opacity: 0.4;
+}
+
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 2rem;
+  }
+  .quote__author {
+    font-size: 2.4rem;
+  }
+  .quote__oraganization {
+    font-size: 1.6rem;
+  }
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* testimonial */
+
+.testimonial {
+  padding: 3rem;
+  /* overflow: initial; */
+}
+
+.testimonial__icon > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial__icon {
+  position: relative;
+  margin-right: 4.5rem;
+}
+
+.testimonial__icon > .icon-container {
+  position: absolute;
+  right: -25px;
+  top: 3rem;
+}
+
+.testimonial .quote__author {
+  font-size: 3rem;
+  white-space: nowrap;
+}
+.testimonial .quote__oraganization {
+  white-space: nowrap;
+}
+
+/* Callout */
+
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.callout__heading {
+  margin-top: 0;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+.callout__btn {
+  justify-self: center; /* by default justify-content& align-items are "stretch" so elements present inside grid are stretches either horizontally or vertically based on its main axsis */
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto; /* here auto--> button takes its required length  without compramise and remaining space is utilised by callout__content */
+  }
+}
+
+/* collapsible */
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+}
+
+.collapsible__body {
+  /* display: initial; */ /* just maintain dispaly and transition property and comment remaining all   ...but result is not as expected why?.... */
+
+  max-height: 100vh;
+  opacity: 0.6;
+  transition: all 1s;
+}
+
+.collapsible--expanded .collapsible__body {
+  /* display:none; */ /* just maintain dispaly and transition property and comment remaining all   ...but result is not as expected why?.... */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition: all 1s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(90deg);
+  transition: all 1s;
+}
+
+.collapsible__chevron {
+  transform: initial;
+  transition: all 1s;
+}
+
+/* Block */
+
+.block {
+  --padding-y: 6rem;
+  padding: var(--padding-y) 2rem;
+}
+
+.block__header {
+  text-align: center;
+  color: rgb(123, 133, 139);
+}
+
+.block__heading {
+  color: var(--color-heading);
+  margin-top: 0;
+}
+
+.block--bg-black {
+  background-color: black;
+  color: #bdbfc0;
+}
+
+.block--bg-black h1,
+.block--bg-black h2,
+.block--bg-black h3 {
+  color: white;
+}
+
+.block--bg-black .block__heading {
+  color: var(--color-text);
+}
+
+.block--skewed-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 77%, 0% 100%);
+  padding-bottom: calc(var(--padding-y) + 4rem);
+}
+
+.block--skewed-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  padding-bottom: calc(var(--padding-y) + 4rem);
+}
+
+.container {
+  max-width: 1140px;
+
+  margin: 0 auto;
+  /* outline: solid 3px red; */
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+.navbar__img {
+  transform: translate(
+    -20px,
+    5px
+  ); /* this svg element by default have some gap above,below ,left side of it ,to overcome that we here providing translate prop */
+}
+
+.collapsible--expanded .navbar__list {
+  /* color: aliceblue; */
+  display: none;
+  /* width: 100%; */
+}
+
+.navbar__list {
+  width: 100%;
+  margin: 0;
+}
+
+.navbar__list a {
+  color: rgb(190, 206, 206);
+}
+
+.navbar__list a:hover {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .navbar__menu {
+    display: none;
+  }
+
+  .navbar__list.collapsible__body {
+    width: auto;
+    display: flex;
+    max-height: initial; /* why its not worked if we provide all these properties to ".navbar__list" only */
+    overflow: initial;
+    opacity: 1;
+
+    /* justify-content:space-between; */
+  }
+  .nav__item {
+    /* white-space: nowrap; */
+    margin-left: 3rem;
+  }
+}
+
+/* Hero */
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.hero__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero .block__header {
+    align-self: center;
+    text-align: left;
+  }
+
+  .hero {
+    padding-top: 0;
+  }
+}
+
+/* block-domain */
+
+.block-domain .input-container {
+  box-shadow: 0 0 30px 20px #e6ebee;
+
+  margin: 4rem auto;
+
+  max-width: 810px;
+}
+
+.block-domain__prices {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 6rem);
+  margin: 3rem auto;
+  justify-items: center;
+  max-width: 80rem;
+}
+
+.block-domain .btn {
+  border-radius: 50%;
+  height: 5rem;
+  margin: 0;
+  padding: 0;
+  width: 5rem;
+}
+
+.block-domain .icon {
+  fill: red; /*FIXME: why this property is not applied  */
+}
+
+@media screen and (max-width: 415px) {
+  .block-domain {
+    padding: 1rem;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-rows: initial;
+  }
+}
+
+/* block-cards */
+
+.block-cards .grid {
+  gap: 7rem 0;
+}
+
+.block-cards .card {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1020px) {
+  .block-cards.block {
+    padding: 0;
+  }
+}
+
+/* feature */
+
+.feature__image {
+  width: 100%;
+}
+
+.feature {
+  gap: 4rem 4rem;
+  align-items: center;
+  margin: 10rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 1;
+  }
+}
+
+/* block-showcase */
+
+.block-showcase__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .block-showcase__image {
+    width: auto;
+    justify-self: right;
+  }
+}
+
+/* block-testimonial */
+
+.block-testimonial .testimonial {
+  padding: 0;
+  margin: 0;
+}
+.block-testimonial .block {
+  margin: 0;
+}
+
+.block-testimonial blockquote {
+  margin: 1rem;
+}
+
+/* footer-block */
+
+.footer section {
+  border-bottom: 1px solid rgb(85, 83, 83);
+  padding-bottom: 2rem;
+}
+
+.footer.grid {
+  gap: 2rem;
+}
+
+.footer__brand {
+  text-align: center;
+}
+
+.footer a {
+  color: rgb(221, 215, 215);
+}
+
+.footer a:hover {
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 768px) {
+  .footer .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .footer .footer__brand {
+    order: -1;
+  }
+
+  .footer .collapsible__chevron {
+    display: none;
+  }
+
+  .footer section {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .footer .collapsible__heading {
+    font-size: 1.8rem;
+  }
+
+  .footer .collapsible__body {
+    opacity: 0.5;
+    max-height: initial;
+  }
+}
