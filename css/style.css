@@ -661,7 +661,7 @@ a {
 }
 
 .block-domain__prices {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 6rem);
   margin: 3rem auto;
   justify-items: center;
@@ -774,12 +774,13 @@ a {
   padding-bottom: 2rem;
 }
 
-.footer.grid {
+.footer .grid {
   gap: 2rem;
 }
 
-.footer__brand {
+.footer .footer__brand {
   text-align: center;
+  border-bottom: 0 solid black;
 }
 
 .footer a {
