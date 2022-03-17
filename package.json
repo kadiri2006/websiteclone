@@ -1,0 +1,26 @@
+{
+  "name": "websiteclone",
+  
+  "version": "1.0.0",
+  "description": "",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node_modules/.bin/parcel index.html",
+    "build":"node_modules/.bin/parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kadiri2006/websiteclone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kadiri2006/websiteclone/issues"
+  },
+  "homepage": "https://github.com/kadiri2006/websiteclone#readme",
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  }
+}
