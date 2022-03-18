@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/kadiri2006/websiteclone/issues"
   },
-  "homepage": "https://github.com/kadiri2006/websiteclone#readme",
+  "homepage": "https://kadiri2006.github.io/websiteclone/",
   "devDependencies": {
     "gh-pages": "^3.2.3",
     "parcel": "^2.3.2"
